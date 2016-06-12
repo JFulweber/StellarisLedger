@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchor" maxHeight="720.0" maxWidth="1080.0" minWidth="1080.0" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <TabPane fx:id="tabpane" layoutX="1.0" maxHeight="720.0" maxWidth="1080.0" prefHeight="720.0" prefWidth="1080.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="planetstab" text="Planets">
+               <content>
+                  <VBox prefHeight="690.0" prefWidth="1080.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Region maxWidth="50.0" HBox.hgrow="ALWAYS" />
+                              <VBox alignment="CENTER_LEFT" prefHeight="88.0" spacing="15.0">
+                                 <children>
+                                  <Button id="enterPlanet" fx:id="enterPlanetButton" mnemonicParsing="false" onAction="#enterPlanet" text="Enter Planet" />
+                                 </children>
+                                 <padding>
+                                    <Insets right="15.0" />
+                                 </padding>
+                              </VBox>
+                              <ComboBox id="planetType" fx:id="planetType" onContextMenuRequested="#initPlanetTypes" promptText="Choose Planet Type" />
+                              <VBox prefHeight="74.0" prefWidth="183.0" spacing="10.0">
+                                 <children>
+                                    <TextField id="planetName" fx:id="planetName" maxWidth="180.0" prefHeight="25.0" prefWidth="0.0" promptText="Planet Name" />
+                                    <TextField id="planetName" fx:id="planetSize" maxWidth="180.0" prefHeight="25.0" prefWidth="152.0" promptText="Planet Size (1-25)" />
+                                    <TextField id="systemName" fx:id="systemName" promptText="System Name (Optional)" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="7.0" left="15.0" top="7.0" />
+                                 </padding>
+                              </VBox>
+                              <Region maxWidth="50.0" prefHeight="150.0" prefWidth="50.0" />
+                              <ScrollPane prefHeight="109.0" prefWidth="555.0">
+                                <content>
+                                  <AnchorPane>
+                                       <children>
+                                          <GridPane id="checkGrid" fx:id="checkGrid" hgap="15.0" layoutX="7.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <CheckBox id="checkBox3" fx:id="checkBox3" mnemonicParsing="false" text="Weak Mag. Field" GridPane.rowIndex="2" />
+                                                <CheckBox id="checkBox6" fx:id="checkBox6" mnemonicParsing="false" text="Tidal Locked" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <CheckBox id="checkBox8" fx:id="checkBox8" mnemonicParsing="false" text="Wild Storm" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                <CheckBox id="checkBox11" fx:id="checkBox11" mnemonicParsing="false" text="Mineral Rich" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                <CheckBox id="checkBox2" fx:id="checkBox2" mnemonicParsing="false" text="Hostile Fauna" GridPane.rowIndex="1" />
+                                                <CheckBox id="checkBox5" fx:id="checkBox5" mnemonicParsing="false" text="Unstable Tectonics" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <CheckBox id="checkBox10" fx:id="checkBox10" mnemonicParsing="false" text="High Gravity" GridPane.columnIndex="3" />
+                                                <CheckBox id="checkBox1" fx:id="checkBox1" mnemonicParsing="false" text="Hazardous Weather" />
+                                                <CheckBox id="checkBox4" fx:id="checkBox4" mnemonicParsing="false" text="Strong Mag. Field" GridPane.columnIndex="1" />
+                                                <CheckBox id="checkBox7" fx:id="checkBox7" mnemonicParsing="false" text="Asteroid Impacts" GridPane.columnIndex="2" />
+                                                <CheckBox id="checkBox9" fx:id="checkBox9" mnemonicParsing="false" text="Low Gravity" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                <CheckBox id="checkBox12" fx:id="checkBox12" mnemonicParsing="false" text="Ultra Rich" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                <CheckBox id="checkBox13" fx:id="checkBox13" mnemonicParsing="false" text="Mineral Poor" GridPane.columnIndex="4" />
+                                                <CheckBox id="checkBox14" fx:id="checkBox14" mnemonicParsing="false" text="Titanic Life" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                <CheckBox id="checkBox15" fx:id="checkBox15" mnemonicParsing="false" text="Natural Beauty" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                <CheckBox id="checkBox16" fx:id="checkBox16" mnemonicParsing="false" text="Atmospheric Aphrodisiac" GridPane.columnIndex="5" />
+                                                <CheckBox id="checkBox17" fx:id="checkBox17" mnemonicParsing="false" text="Lush" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                                <CheckBox id="checkBox18" fx:id="checkBox18" mnemonicParsing="false" text="Bleak" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                                <CheckBox id="checkBox19" fx:id="checkBox19" mnemonicParsing="false" text="Irradiated" GridPane.columnIndex="6" />
+                                                <CheckBox id="checkBox20" fx:id="checkBox20" mnemonicParsing="false" text="Asteroid Belt" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                                <CheckBox id="checkBox21" fx:id="checkBox21" mnemonicParsing="false" text="Extensive Moon System" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                                <CheckBox fx:id="checkBox22" mnemonicParsing="false" text="Carbon World" GridPane.columnIndex="7" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="632.0" prefWidth="1080.0">
+                           <children>
+                              <TableView fx:id="planetTable" prefWidth="1080.0" HBox.hgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn id="planetNames" fx:id="sizeColumn" maxWidth="450.0" prefWidth="50.0" text="Size" />
+                                    <TableColumn fx:id="colonizableColumn" prefWidth="75.0" text="Colonizable" />
+                                    <TableColumn fx:id="systemColumn" maxWidth="4000.0" prefWidth="150.0" text="System Name" />
+                                  <TableColumn id="planetNames" fx:id="nameColumn" maxWidth="4000.0" prefWidth="150.0" text="Planet Name" />
+                                  <TableColumn id="planetHab" fx:id="habitabilityColumn" maxWidth="1500.0" minWidth="3.0" text="Habitability " />
+                                    <TableColumn fx:id="modifieroutputColumn" prefWidth="650.0" text="Modifiers" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+          <Tab fx:id="settingstab" text="Settings">
+               <content>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" layoutX="-3.0" layoutY="-1.0" maxWidth="384.0" prefHeight="693.0" prefWidth="384.0" spacing="30.0">
+                                 <children>
+                                    <Label text="Starting Planet Type" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox id="basePlanets" fx:id="basePlanets" prefWidth="150.0" promptText="Choose Base Planet" />
+                                    <GridPane alignment="CENTER" hgap="15.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.0" minWidth="10.0" prefWidth="192.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="192.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <padding>
+                                          <Insets top="30.0" />
+                                       </padding>
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="379.0" text="Planet Type Colonization Researches" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="21.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets left="-15.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <CheckBox id="check1" fx:id="check1" mnemonicParsing="false" text="Arctic Colonization" GridPane.rowIndex="2" />
+                                          <CheckBox fx:id="check2" mnemonicParsing="false" text="Arid Colonization" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <CheckBox fx:id="check3" mnemonicParsing="false" text="Continental Colonization" GridPane.rowIndex="3" />
+                                          <CheckBox fx:id="check4" mnemonicParsing="false" text="Desert Colonization" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <CheckBox fx:id="check5" mnemonicParsing="false" text="Ocean Colonization" GridPane.rowIndex="4" />
+                                          <CheckBox fx:id="check6" mnemonicParsing="false" text="Tropical Colonization" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <CheckBox fx:id="check7" mnemonicParsing="false" text="Tundra" GridPane.rowIndex="5" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="381.0" text="Habitability Modifying Research" GridPane.columnSpan="2" GridPane.rowIndex="7">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets left="-15.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <CheckBox fx:id="check9" mnemonicParsing="false" text="Atmospheric Filtering" GridPane.rowIndex="8" />
+                                          <CheckBox fx:id="check10" mnemonicParsing="false" text="Hostile Enviornment Adap." GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="385.0" text="Traits" GridPane.columnSpan="2" GridPane.rowIndex="10">
+                                             <font>
+                                                <Font size="46.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets left="-15.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <CheckBox fx:id="check11" mnemonicParsing="false" text="Adaptable" GridPane.rowIndex="11" />
+                                          <CheckBox fx:id="check12" mnemonicParsing="false" text="Extremely Adaptable" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin>
+                                          </CheckBox>
+                                          <CheckBox fx:id="check8" mnemonicParsing="false" text="Atmospheric Manipulation" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <CheckBox fx:id="check13" mnemonicParsing="false" text="Nonadaptive" GridPane.rowIndex="12" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="15.0" />
+                                       </VBox.margin>
+                                    </GridPane>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets top="20.0" />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane maxWidth="696.0" minHeight="0.0" minWidth="698.0" prefHeight="691.0" prefWidth="698.0">
+                           <children>
+                              <VBox alignment="CENTER" layoutX="4.0" layoutY="-2.0" prefHeight="696.0" prefWidth="694.0">
+                                 <children>
+                                    <TableView fx:id="colonizableTable" prefHeight="692.0" prefWidth="482.0">
+                                      <columns>
+                                        <TableColumn fx:id="colonizablePlanets" editable="false" maxWidth="231.0" prefWidth="347.0" sortable="false" text="Planet Type" />
+                                        <TableColumn fx:id="colonizableResults" maxWidth="231.0" prefWidth="347.0" text="Is it colonizable?" />
+                                          <TableColumn fx:id="colonizableHab" maxWidth="231.0" prefWidth="231.0" text="Habitability // inaccurate rn" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
